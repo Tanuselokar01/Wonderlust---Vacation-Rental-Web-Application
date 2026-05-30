@@ -1,4 +1,4 @@
-#Wonderlust - Vacation Rental Web Application
+Wonderlust - Vacation Rental Web Application
 
 Overview
 Wonderlust is a full-stack vacation rental web application inspired by platforms like Airbnb. The platform allows users to browse, create, edit, and manage vacation property listings through an intuitive and responsive interface.
