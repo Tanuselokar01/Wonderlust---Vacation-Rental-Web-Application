@@ -4,6 +4,8 @@
     color: #fff;
     border-radius: 25px;
     padding: 0.4rem 1rem;
+    border: none;
+    white-space: nowrap;
   }
 
   .custom-btn:hover {
@@ -13,18 +15,28 @@
 
   .search-input {
     border-radius: 25px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
   }
 
   .navbar-search {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
   }
 
-  @media (max-width: 768px) {
+  /* IMPORTANT FIX */
+  @media (max-width: 992px) {
     .navbar-search {
+      flex-direction: column;
       width: 100%;
-      margin-top: 10px;
+      margin: 10px 0;
+    }
+
+    .search-input {
+      margin-bottom: 8px;
+    }
+
+    .custom-btn {
+      width: 100%;
     }
   }
 </style>
@@ -53,17 +65,23 @@
         </li>
       </ul>
 
-      <!-- CENTER SEARCH -->
-      <form class="d-flex navbar-search mx-lg-auto my-2 my-lg-0">
-        <input class="form-control search-input me-2" type="search" placeholder="Search destinations">
-        <button class="custom-btn d-flex align-items-center" type="submit">
-          <i class="fa-solid fa-magnifying-glass me-2"></i>
+      <!-- SEARCH -->
+      <form class="d-flex navbar-search mx-lg-auto flex-column flex-lg-row">
+
+        <input 
+          class="form-control search-input me-lg-2 mb-2 mb-lg-0" 
+          type="search" 
+          placeholder="Search destinations">
+
+        <button class="custom-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass me-1"></i>
           Search
         </button>
+
       </form>
 
       <!-- RIGHT -->
-      <ul class="navbar-nav ms-auto align-items-lg-center">
+      <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
           <a class="nav-link" href="/listings/new">Airbnb your home</a>
